@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "pl.edu.wat.wcy.isi.tim.filharmoniaapp"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:gridlayout-v7:27.1.1'
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+    implementation 'com.github.NaikSoftware:StompProtocolAndroid:1.6.4'
+    api "io.reactivex.rxjava2:rxjava:2.2.5"
+}

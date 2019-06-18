@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="pl.edu.wat.wcy.isi.tim.filharmoniaapp">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".Controller.TicketDetailsActivity"
+            android:label="@string/title_activity_ticket_details" />
+        <activity android:name=".Controller.PaymentActivity"
+            android:label="@string/title_activity_payment"/>
+        <activity android:name=".Controller.DiscountActivity"
+            android:label="@string/title_activity_discount"/>
+        <activity android:name=".Controller.SelectSeatActivity"
+            android:label="@string/title_activity_selectseat"/>
+        <activity android:name=".Controller.ConcertActivity"
+            android:label="@string/title_activity_concert"/>
+        <activity android:name=".Controller.RepertoireActivity"
+            android:label="@string/title_activity_repertoire"/>
+        <activity
+            android:name=".Controller.TicketsActivity"
+            android:label="@string/title_activity_tickets"
+            android:parentActivityName=".Controller.MainActivity"/>
+        <activity android:name=".Controller.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

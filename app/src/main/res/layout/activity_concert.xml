@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller.ConcertActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:text="Informacje o koncercie"
+        android:textColor="@android:color/black"
+        android:padding="5dp"
+        android:contextClickable="false"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contextClickable="false"
+        android:text="Nazwa koncertu" />
+
+    <TextView
+        android:id="@+id/concertViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:padding="5dp"
+        android:text="Data doncertu" />
+
+    <TextView
+        android:id="@+id/concertViewDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:padding="5dp"
+        android:text="Cena biletu" />
+
+    <TextView
+        android:id="@+id/concertViewCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contextClickable="false"
+        android:text="Nazwa sali koncertowej" />
+
+    <TextView
+        android:id="@+id/concertViewRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:contextClickable="false"
+        android:layout_height="wrap_content"
+        android:text="Wykonawca" />
+
+    <TextView
+        android:id="@+id/concertViewPerformer"
+        android:layout_width="match_parent"
+        android:contextClickable="false"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:padding="5dp"
+        android:text="Utwory" />
+
+    <ListView
+        android:id="@+id/concertViewRepertoire"
+        android:layout_width="match_parent"
+        android:contextClickable="false"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BuyTicketButton"
+        android:text="@string/buyTicket"/>
+
+</LinearLayout>
