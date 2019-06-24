@@ -17,23 +17,23 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
-            android:name=".Controller.TicketDetailsActivity"
+            android:name=".activities.TicketDetailsActivity"
             android:label="@string/title_activity_ticket_details" />
-        <activity android:name=".Controller.PaymentActivity"
+        <activity android:name=".activities.PaymentActivity"
             android:label="@string/title_activity_payment"/>
-        <activity android:name=".Controller.DiscountActivity"
+        <activity android:name=".activities.DiscountActivity"
             android:label="@string/title_activity_discount"/>
-        <activity android:name=".Controller.SelectSeatActivity"
+        <activity android:name=".activities.SelectSeatActivity"
             android:label="@string/title_activity_selectseat"/>
-        <activity android:name=".Controller.ConcertActivity"
+        <activity android:name=".activities.ConcertActivity"
             android:label="@string/title_activity_concert"/>
-        <activity android:name=".Controller.RepertoireActivity"
+        <activity android:name=".activities.RepertoireActivity"
             android:label="@string/title_activity_repertoire"/>
         <activity
-            android:name=".Controller.TicketsActivity"
+            android:name=".activities.TicketsActivity"
             android:label="@string/title_activity_tickets"
-            android:parentActivityName=".Controller.MainActivity"/>
-        <activity android:name=".Controller.MainActivity">
+            android:parentActivityName=".activities.MainActivity"/>
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

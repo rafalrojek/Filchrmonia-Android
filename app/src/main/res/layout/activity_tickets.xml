@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Controller.TicketsActivity">
+    tools:context=".activities.TicketsActivity"
+    android:orientation="vertical">
 
     <ListView
         android:id="@+id/ticket_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/downloadTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/downloadTickets"/>
 
 </LinearLayout>

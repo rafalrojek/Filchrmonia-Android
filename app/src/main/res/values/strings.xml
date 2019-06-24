@@ -23,7 +23,7 @@
     <string name="PLN">zł</string>
     <string name="PaymentCanelled">Płatność anulowana</string>
     <string name="PaymentSuccess"><![CDATA[Płatność zatwierdzona. Trwa pobieranie biletu]]></string>
-    <string name="title_activity_ticket_details">TicketDetailsActivity</string>
+    <string name="title_activity_ticket_details">Szczegóły biletu</string>
     <string name="TicketInfo">Informacje o bilecie</string>
     <string name="ConcerDate">Data doncertu</string>
     <string name="TIcketCost">Cena biletu</string>
@@ -38,4 +38,14 @@
     <string name="title_activity_selectseat">Wybierz miejsca siedzące</string>
     <string name="title_activity_discount">Wybierz zniżki</string>
     <string name="title_activity_payment">Płatność</string>
+    <string name="noTicketError">Musisz zająć co najmniej jedno miejsce</string>
+    <string name="ConcertNameDetails">Nazwa koncertu</string>
+    <string name="ConcertDateDetails">Data doncertu</string>
+    <string name="ConcertTicketDetails">Cena biletu</string>
+    <string name="ConcertRoomDetalis">Nazwa sali koncertowej</string>
+    <string name="ConcertPerformerDetalis">Wykonawca</string>
+    <string name="ConcertUDetalis">Utwory</string>
+    <string name="downloadTickets">Pobierz bilety</string>
+    <string name="aksError">Błąd generowania zapytania</string>
+    <string name="noSeat">Nie zaznaczono żadnego miejsca</string>
 </resources>
