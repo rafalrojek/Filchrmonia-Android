@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SelectSeatActivity"
+    tools:context=".view.activities.SelectSeatActivity"
     android:orientation="vertical">
 
     <TextView
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <pl.edu.wat.wcy.isi.tim.filharmoniaapp.views.Square
+    <pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.views.Square
         android:id="@+id/square"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -784,7 +784,7 @@
                 android:layout_height="wrap_content" />
         </TableRow>
 
-    </pl.edu.wat.wcy.isi.tim.filharmoniaapp.views.Square>
+    </pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.views.Square>
 
      <Button
          android:id="@+id/selectDiscountButton"
