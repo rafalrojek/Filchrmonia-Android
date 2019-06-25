@@ -17,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.R;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.controller.DiscountController;
+import pl.edu.wat.wcy.isi.tim.filharmoniaapp.controller.DiscountListController;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.model.Discount;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.model.Ticket;
 
@@ -57,18 +58,7 @@ public class DiscountAdapter extends ArrayAdapter<Ticket> {
         adapter.setDropDownViewResource(R.layout.spinner_item);
         spinner.setAdapter(adapter);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                controller.onItemSelected(ticket,i);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                controller.onNothingSelected(ticket);
-            }
-
-        });
+        spinner.setOnItemSelectedListener(new DiscountListController(controller,ticket));
         return view;
     }
 }
