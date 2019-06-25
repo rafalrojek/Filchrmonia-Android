@@ -1,22 +1,18 @@
 package pl.edu.wat.wcy.isi.tim.filharmoniaapp.controller;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import org.json.JSONArray;
 import org.mapstruct.factory.Mappers;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
-import pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.activities.RepertoireActivity;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.dtos.ConcertDto;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.dtos.Mapper;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.model.Concert;
+import pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.activities.RepertoireActivity;
 
 public class RepertoireController {
 

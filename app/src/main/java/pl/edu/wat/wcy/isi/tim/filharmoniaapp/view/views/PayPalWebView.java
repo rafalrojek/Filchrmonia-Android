@@ -7,7 +7,7 @@ import pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.activities.PaymentActivity;
 
 public class PayPalWebView extends WebViewClient {
 
-    PaymentActivity activity;
+    private PaymentActivity activity;
 
     public PayPalWebView(PaymentActivity activity) {
         this.activity = activity;

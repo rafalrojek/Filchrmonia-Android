@@ -1,7 +1,5 @@
 package pl.edu.wat.wcy.isi.tim.filharmoniaapp.controller;
 
-import android.view.View;
-import android.widget.AdapterView;
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.google.gson.Gson;
@@ -12,21 +10,20 @@ import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import pl.edu.wat.wcy.isi.tim.filharmoniaapp.R;
-import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.model.Ticket;
-import pl.edu.wat.wcy.isi.tim.filharmoniaapp.utils.PriceUtils;
-import pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.activities.DiscountActivity;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.dtos.DiscountDto;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.dtos.Mapper;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.model.Discount;
+import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.model.Ticket;
+import pl.edu.wat.wcy.isi.tim.filharmoniaapp.utils.PriceUtils;
+import pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.activities.DiscountActivity;
 
 public class DiscountController {
 
     private DiscountActivity activity;
     private Mapper mapper = Mappers.getMapper(Mapper.class);
     private ArrayList<Discount> discounts;
-    List<Ticket> tickets;
-    BigDecimal ticketPrice;
+    private List<Ticket> tickets;
+    private BigDecimal ticketPrice;
 
     public DiscountController(DiscountActivity discountActivity,
                               List<Ticket> tickets, BigDecimal ticketPrice) {
@@ -39,9 +36,7 @@ public class DiscountController {
         String address = RequestSingleton.getProperty("REST",activity.getApplicationContext());
         String url = address + "/discount";
         RequestSingleton.getInstance(activity.getApplicationContext()).addToRequestQueue(new JsonArrayRequest
-                (Request.Method.GET, url, null,
-                        this::onResponse,
-                        activity::onErrorResponse)
+                (Request.Method.GET, url, null, this::onResponse, activity::onErrorResponse)
         );
     }
 

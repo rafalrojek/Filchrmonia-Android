@@ -25,7 +25,6 @@ public class TicketsActivity extends AppCompatActivity {
     @BindView(R.id.downloadTickets) Button button;
     private TicketListAdapter adapter;
     private List<AndroidTicket> tickets;
-    private TicketController controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,7 @@ public class TicketsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tickets);
         ButterKnife.bind(this);
 
-        controller = new TicketController(this);
+        TicketController controller = new TicketController(this);
 
         tickets = controller.getTickets();
 

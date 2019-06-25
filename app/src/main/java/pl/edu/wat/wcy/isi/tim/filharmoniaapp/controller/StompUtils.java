@@ -2,12 +2,14 @@ package pl.edu.wat.wcy.isi.tim.filharmoniaapp.controller;
 
 import android.annotation.SuppressLint;
 import android.util.Log;
+
+import io.reactivex.disposables.Disposable;
 import ua.naiksoftware.stomp.StompClient;
 
-public class StompUtils {
+class StompUtils {
 	@SuppressLint("CheckResult")
-    public static void lifecycle(StompClient stompClient) {
-		stompClient.lifecycle().subscribe(lifecycleEvent -> {
+	static Disposable lifecycle(StompClient stompClient) {
+		return stompClient.lifecycle().subscribe(lifecycleEvent -> {
 			switch (lifecycleEvent.getType()) {
 				case OPENED:
 					Log.d("stomp", "Stomp connection opened");

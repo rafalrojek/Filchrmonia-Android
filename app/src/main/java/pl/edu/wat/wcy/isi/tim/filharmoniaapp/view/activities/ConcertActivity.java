@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.view.adapters.RepertoireAdapter;

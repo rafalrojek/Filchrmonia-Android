@@ -55,8 +55,7 @@ public class DiscountActivity extends AppCompatActivity {
     }
 
     public void setPrice (String sum) {
-        String s = getApplicationContext().getString(R.string.sum) + " "
-                + sum + getApplicationContext().getString(R.string.PLN);
+        String s = getApplicationContext().getString(R.string.sum) + " " + sum + getApplicationContext().getString(R.string.PLN);
         textView.setText(s);
     }
 

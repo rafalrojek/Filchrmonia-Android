@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, TicketsActivity.class));
     }
 
-    private void onMapClick(View v) {
+    private void onMapClick(View view) {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:52.2344564,21.0112763,15")));
     }
 }

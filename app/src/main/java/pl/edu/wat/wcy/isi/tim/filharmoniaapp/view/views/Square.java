@@ -17,7 +17,7 @@ public class Square extends TableLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-        final int width = getMeasuredWidth();
-        setMeasuredDimension(width,width);
+        final int square = getMeasuredWidth();
+        setMeasuredDimension(square,square);
     }
 }
