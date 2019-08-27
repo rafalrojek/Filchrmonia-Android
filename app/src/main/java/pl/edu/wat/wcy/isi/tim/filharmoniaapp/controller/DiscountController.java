@@ -8,6 +8,7 @@ import org.json.JSONArray;
 import org.mapstruct.factory.Mappers;
 import java.lang.reflect.Type;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import pl.edu.wat.wcy.isi.tim.filharmoniaapp.model.dtos.DiscountDto;
@@ -50,11 +51,22 @@ public class DiscountController {
 
     public void onItemSelected(Ticket ticket, int i) {
         ticket.setDiscount(discounts.get(i));
-        BigDecimal sum  = PriceUtils.updatePrice(tickets, ticketPrice);
+        BigDecimal sum  = updatePrice();
         activity.setPrice(sum.toPlainString());
     }
 
     public void onNothingSelected(Ticket ticket) {
         ticket.setDiscount(null);
+    }
+
+    private BigDecimal updatePrice() {
+        BigDecimal sum = new BigDecimal(0);
+        for (Ticket t: tickets) {
+            if (t.getDiscount() != null) {
+                BigDecimal discount = new BigDecimal((100 - t.getDiscount().getPercents()) / 100.0);
+                sum = sum.add(ticketPrice.multiply(discount));
+            }
+        }
+        return sum.setScale(2, RoundingMode.HALF_UP);
     }
 }

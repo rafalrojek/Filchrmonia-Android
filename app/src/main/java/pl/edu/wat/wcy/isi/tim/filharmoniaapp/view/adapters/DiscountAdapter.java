@@ -41,7 +41,6 @@ public class DiscountAdapter extends ArrayAdapter<Ticket> {
         this.controller = controller;
     }
 
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
